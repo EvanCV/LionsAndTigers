@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CustomCollectionViewCell.h
 //  LionsAndTigers
 //
 //  Created by Evan Vandenberg on 1/15/15.
@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController
 
-@property NSMutableArray *photosArray;
+
+@interface CustomCollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+
 
 @end
-

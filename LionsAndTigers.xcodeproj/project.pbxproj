@@ -16,6 +16,7 @@
 		94367E961A688EFE000D1514 /* LionsAndTigersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367E951A688EFE000D1514 /* LionsAndTigersTests.m */; };
 		94367EA11A688F96000D1514 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367EA01A688F96000D1514 /* TopViewController.m */; };
 		94367EA41A688FA6000D1514 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367EA31A688FA6000D1514 /* HUDViewController.m */; };
+		94367EA71A68E4EF000D1514 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367EA61A68E4EF000D1514 /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		94367EA01A688F96000D1514 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 		94367EA21A688FA6000D1514 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
 		94367EA31A688FA6000D1514 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		94367EA51A68E4EF000D1514 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		94367EA61A68E4EF000D1514 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				94367EA01A688F96000D1514 /* TopViewController.m */,
 				94367EA21A688FA6000D1514 /* HUDViewController.h */,
 				94367EA31A688FA6000D1514 /* HUDViewController.m */,
+				94367EA51A68E4EF000D1514 /* CustomCollectionViewCell.h */,
+				94367EA61A68E4EF000D1514 /* CustomCollectionViewCell.m */,
 				94367E831A688EFE000D1514 /* Main.storyboard */,
 				94367E861A688EFE000D1514 /* Images.xcassets */,
 				94367E881A688EFE000D1514 /* LaunchScreen.xib */,
@@ -232,6 +237,7 @@
 				94367EA41A688FA6000D1514 /* HUDViewController.m in Sources */,
 				94367EA11A688F96000D1514 /* TopViewController.m in Sources */,
 				94367E821A688EFE000D1514 /* RootViewController.m in Sources */,
+				94367EA71A68E4EF000D1514 /* CustomCollectionViewCell.m in Sources */,
 				94367E7F1A688EFE000D1514 /* AppDelegate.m in Sources */,
 				94367E7C1A688EFE000D1514 /* main.m in Sources */,
 			);
