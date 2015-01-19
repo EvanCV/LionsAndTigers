@@ -9,6 +9,8 @@
 #import "HUDViewController.h"
 
 @interface HUDViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *lionButton;
+@property (weak, nonatomic) IBOutlet UIButton *tigerButton;
 
 @end
 
@@ -17,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 }
 
 - (IBAction)onLionButton:(UIButton *)sender

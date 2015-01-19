@@ -28,8 +28,25 @@
 {
     [super viewDidLoad];
     self.myHUDViewController.delegate = self.myTopViewDelegate;
-
 }
+
+- (void)swipeRightGesture
+{
+    self.topViewLeftHorizontalContstraint.constant = 100;
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+
+- (void)swipeLeftGesture;
+{
+    self.topViewLeftHorizontalContstraint.constant = 0;
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
 
 //Moves topview left constraint 100 points to the right
 - (void)topRevealButtonTapped
@@ -57,8 +74,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-
-
     if ([segue.identifier isEqualToString:@"segueToNav"])
     {
         NSLog(@"lol lol");
@@ -72,8 +87,6 @@
     {
         self.myHUDViewController = segue.destinationViewController;
     }
-    
-    
 }
 
 

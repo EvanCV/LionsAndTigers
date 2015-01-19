@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+
 @protocol TopDelegate <NSObject>
 
 - (void)topRevealButtonTapped;
+- (void)swipeRightGesture;
+- (void)swipeLeftGesture;
 
 @end
 
@@ -19,5 +23,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *topViewControllerCollectionView;
 @property NSMutableArray *photosArray;
 
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeft;
+
+@property AVQueuePlayer *myAudioPlayer;
 
 @end

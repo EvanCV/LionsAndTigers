@@ -17,6 +17,8 @@
 		94367EA11A688F96000D1514 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367EA01A688F96000D1514 /* TopViewController.m */; };
 		94367EA41A688FA6000D1514 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367EA31A688FA6000D1514 /* HUDViewController.m */; };
 		94367EA71A68E4EF000D1514 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94367EA61A68E4EF000D1514 /* CustomCollectionViewCell.m */; };
+		94367EE61A6CB124000D1514 /* lionRoar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94367EE51A6CB124000D1514 /* lionRoar.mp3 */; };
+		94367EE91A6CB142000D1514 /* tigerGrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94367EE81A6CB142000D1514 /* tigerGrowl.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		94367EA31A688FA6000D1514 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 		94367EA51A68E4EF000D1514 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		94367EA61A68E4EF000D1514 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		94367EE51A6CB124000D1514 /* lionRoar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lionRoar.mp3; sourceTree = "<group>"; };
+		94367EE81A6CB142000D1514 /* tigerGrowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tigerGrowl.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				94367E781A688EFE000D1514 /* LionsAndTigers */,
 				94367E921A688EFE000D1514 /* LionsAndTigersTests */,
 				94367E771A688EFE000D1514 /* Products */,
+				94367EE71A6CB12F000D1514 /* SoundBytes */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +137,15 @@
 				94367E941A688EFE000D1514 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94367EE71A6CB12F000D1514 /* SoundBytes */ = {
+			isa = PBXGroup;
+			children = (
+				94367EE51A6CB124000D1514 /* lionRoar.mp3 */,
+				94367EE81A6CB142000D1514 /* tigerGrowl.mp3 */,
+			);
+			name = SoundBytes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +228,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94367EE61A6CB124000D1514 /* lionRoar.mp3 in Resources */,
 				94367E851A688EFE000D1514 /* Main.storyboard in Resources */,
 				94367E8A1A688EFE000D1514 /* LaunchScreen.xib in Resources */,
 				94367E871A688EFE000D1514 /* Images.xcassets in Resources */,
+				94367EE91A6CB142000D1514 /* tigerGrowl.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +446,7 @@
 				94367E9B1A688EFE000D1514 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94367E9C1A688EFE000D1514 /* Build configuration list for PBXNativeTarget "LionsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +455,7 @@
 				94367E9E1A688EFE000D1514 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,6 +15,7 @@
 @property (nonatomic, weak) HUDViewController *myHUDViewDelegate;
 @property NSMutableArray *lionsArray;
 @property NSMutableArray *tigersArray;
+@property (weak, nonatomic) IBOutlet UIImageView *openingImage;
 
 @end
 
@@ -36,9 +37,13 @@
                         [UIImage imageNamed:@"tiger_3.jpeg"],
                         nil];
 
-    self.photosArray = [[NSMutableArray alloc]initWithArray:self.lionsArray ];
+    self.photosArray = [NSMutableArray new];
+    self.navigationItem.title = @"Lions and Tigers";
+    self.openingImage.image = [UIImage imageNamed:@"lionTiger_pic"];
 
     NSLog(@"%lu",(unsigned long)self.lionsArray.count);
+
+    
 
 }
 
@@ -50,12 +55,25 @@
     return cell;
 }
 
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.photosArray.count;
 }
 
+//Pull drawer out using a right swipe
+- (IBAction)onSwipeRightGesture:(UISwipeGestureRecognizer *)sender
+{
+    [self.delegate swipeRightGesture];
+}
 
+//Put drawer back using left swipe
+- (IBAction)onSwipeLeftGesture:(UISwipeGestureRecognizer *)sender
+{
+    [self.delegate swipeLeftGesture];
+}
+
+//Open the menu
 - (IBAction)onMenuButtonTapped:(UIBarButtonItem *)sender
 {
     [self.delegate topRevealButtonTapped];
@@ -63,24 +81,48 @@
 }
 
 
+//Load lion images and change title
 - (void)lionsButtonTapped
 {
+    //Adding lion photos and changing the title
     [self.photosArray removeAllObjects];
     [self.photosArray addObjectsFromArray:self.lionsArray];
     NSLog(@"%lu", (unsigned long)self.photosArray.count);
     NSLog(@"%@", self.photosArray);
     [self.topViewControllerCollectionView reloadData];
     [self.delegate topRevealButtonTapped];
+    self.navigationItem.title = @"Lion Pics";
+
+    self.openingImage.hidden = YES;
+
+    //start a background sound
+    NSString *soundFilePath = @"/Users/evanvandenberg/Desktop/Mobile Makers/Week2/WeekendChallenge/LionsAndTigers/lionRoar.mp3";
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    AVPlayerItem *item1 = [AVPlayerItem playerItemWithURL:fileURL];
+    self.myAudioPlayer = [[AVQueuePlayer alloc] initWithPlayerItem:item1];
+    [self.myAudioPlayer play];
     
 }
 
 
 - (void)tigerButtonTapped
 {
+    //adding tiger photos and changing titles
     [self.photosArray removeAllObjects];
     [self.photosArray addObjectsFromArray:self.tigersArray];
     [self.topViewControllerCollectionView reloadData];
     [self.delegate topRevealButtonTapped];
+    self.navigationItem.title = @"Tiger Pics";
+
+    self.openingImage.hidden = YES;
+
+    //start a background sound
+    NSString *soundFilePath = @"/Users/evanvandenberg/Desktop/Mobile Makers/Week2/WeekendChallenge/LionsAndTigers/tigerGrowl.mp3";
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    AVPlayerItem *item1 = [AVPlayerItem playerItemWithURL:fileURL];
+    self.myAudioPlayer = [[AVQueuePlayer alloc] initWithPlayerItem:item1];
+    [self.myAudioPlayer play];
+
 
 
 }
