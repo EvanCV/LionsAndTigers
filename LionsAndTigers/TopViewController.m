@@ -59,6 +59,7 @@
 - (IBAction)onMenuButtonTapped:(UIBarButtonItem *)sender
 {
     [self.delegate topRevealButtonTapped];
+    NSLog(@"%@", self.delegate);
 }
 
 
@@ -69,6 +70,7 @@
     NSLog(@"%lu", (unsigned long)self.photosArray.count);
     NSLog(@"%@", self.photosArray);
     [self.topViewControllerCollectionView reloadData];
+    [self.delegate topRevealButtonTapped];
     
 }
 
@@ -78,6 +80,8 @@
     [self.photosArray removeAllObjects];
     [self.photosArray addObjectsFromArray:self.tigersArray];
     [self.topViewControllerCollectionView reloadData];
+    [self.delegate topRevealButtonTapped];
+
 
 }
 
